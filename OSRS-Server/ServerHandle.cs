@@ -18,5 +18,12 @@ namespace OSRS_Server
             }
             // TODO: connect to game state
         }
+
+        public static void UDPTestReceived(int _fromClient, Packet _packet)
+        {
+            string _msg = _packet.ReadString();
+
+            Console.WriteLine($"Received Packet via UDP. Contains message: {_msg}");
+        }
     }
 }
